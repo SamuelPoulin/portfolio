@@ -23,20 +23,28 @@
   background-color: #1b1b2f;
 }
 
-#animated-text {
+#presentation-container {
   display: flex;
-  align-self: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  
+  height: 100px;
+}
+
+#name-container {  
   width: 215px;
   height: 40px;
 
   font-family: 'Lato';
   font-size: 32px;
+}
 
+#description-container {
+  
 }
 
 #down-button {
   display: flex;
   align-self: center;
+  margin-bottom: 75px;
 }
