@@ -1,0 +1,42 @@
+.fullscreen-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.halfscreen-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 50vh;
+}
+
+#top-container {
+  background: #f3f3f3;
+  justify-content: space-between;
+}
+
+#middle-container {
+  background-color: #1b1b2f;
+}
+
+#animated-text {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  
+  width: 215px;
+  height: 40px;
+
+  font-family: 'Lato';
+  font-size: 32px;
+
+}
+
+#down-button {
+  display: flex;
+  align-self: center;
+}
