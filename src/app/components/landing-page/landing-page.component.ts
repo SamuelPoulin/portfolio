@@ -14,6 +14,7 @@ export class LandingPageComponent implements OnInit {
 
   displayedText: string;
   displayedLine: string;
+
   constructor() {
     this.text = 'Samuel Poulin';
     this.line = '_';
@@ -27,7 +28,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
     this.animateLine();
 
-    setTimeout(() => this.animateText(), 2000);
+    setTimeout(() => this.animateText(), 1000);
+
+    setTimeout(()=>this.scrollToElement('#bottom-container'), 7000);
   }
 
   animateLine(): void {
@@ -43,12 +46,11 @@ export class LandingPageComponent implements OnInit {
   }
 
   animateText(): void {
-    console.log(this.text[this.nextCharacter]);
     this.displayedText += this.text[this.nextCharacter];
 
     if (this.nextCharacter < this.text.length - 1) {
       this.nextCharacter++;
-      setTimeout(() => this.animateText(), Math.floor(Math.random() * (500)));
+      setTimeout(() => this.animateText(), Math.floor(Math.random() * (300)));
     }
   }
 

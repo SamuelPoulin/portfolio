@@ -1,3 +1,5 @@
+@import '~animate-scss/animate.scss';
+
 .fullscreen-container {
   display: flex;
   flex-direction: column;
@@ -14,37 +16,87 @@
   height: 50vh;
 }
 
+.neumorphic-dark {
+  box-shadow: -4px -4px 12px rgba(255, 255, 255, 0.05), 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.neumorphic-light {
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.8), 6px 6px 12px rgba(185, 188, 193, 0.5);
+}
+
 #top-container {
   background: #f3f3f3;
   justify-content: space-between;
 }
 
-#middle-container {
+#bottom-container {
   background-color: #1b1b2f;
+  justify-content: center;
+  align-items: center;
 }
 
 #presentation-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  height: 100px;
 }
 
 #name-container {  
   width: 215px;
   height: 40px;
 
-  font-family: 'Lato';
+  font-family: 'lato';
   font-size: 32px;
 }
 
 #description-container {
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'lato-light-italic';
+  font-size: 20px;
+
+  margin-top: 5px;
+
+  @include fadeInUp(
+    $delay: 3.5s
+  );
+}
+
+#description-divider {
+  margin: 0px 5px;
 }
 
 #down-button {
   display: flex;
+  flex-direction: column;
   align-self: center;
+  justify-content : center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
   margin-bottom: 75px;
+
+  @include bounce(
+    $delay: 6s,
+    $duration: 2s
+  );
+}
+
+#test-button {
+  height: 60px;
+  width: 60px;
+}
+
+#test-icon {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  #description-container {
+    flex-direction: column;
+  }
 }

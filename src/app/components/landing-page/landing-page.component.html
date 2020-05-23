@@ -5,13 +5,14 @@
       {{displayedText}}{{displayedLine}}
     </div>
     <div id="description-container">
-      Software Engineering @ Polytechnique Montréal
+      <div>Software Engineering</div>
+      <div id="description-divider">@</div>
+      <div>Polytechnique Montréal</div>
     </div>
   </div>
-  <button mat-icon-button id="down-button" (click)="scrollToElement('#middle-container')">
-    <mat-icon>keyboard_arrow_downwards</mat-icon>
+  <button mat-icon-button id="down-button" class="neumorphic-light" (click)="scrollToElement('#bottom-container')">
+    <mat-icon>expand_more</mat-icon>
   </button>
 </div>
-<div id="middle-container" class="fullscreen-container">
-
+<div id="bottom-container" class="fullscreen-container">
 </div>
