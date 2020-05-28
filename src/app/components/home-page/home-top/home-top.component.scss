@@ -1,0 +1,76 @@
+@import "~animate-scss/_properties";
+@import '~animate-scss/_fading-entrances/_fadeInRight';
+@import '~animate-scss/_fading-entrances/_fadeInUp';
+@import '~animate-scss/_attention-seekers/_bounce';
+
+@import 'src/variables';
+
+#home-top-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: $light-background;
+}
+
+#presentation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#name-container {  
+  width: 215px;
+  height: 40px;
+
+  font-family: 'lato';
+  font-size: 32px;
+
+  @include fadeInRight();
+}
+
+#description-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'lato-light-italic';
+  font-size: 20px;
+
+  margin-top: 5px;
+
+  @include fadeInUp(
+    $delay: 3.5s
+  ); 
+}
+
+#description-divider {
+  margin: 0px 5px;
+}
+
+#down-button {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content : center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  margin-bottom: 75px;
+
+  @include bounce(
+    $delay: 6s,
+    $duration: 2s
+  );
+}
+
+@media only screen and (max-width: 1000px) {
+  #description-container {
+    flex-direction: column;
+  }
+}

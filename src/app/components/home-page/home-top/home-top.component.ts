@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss']
+  selector: 'app-home-top',
+  templateUrl: './home-top.component.html',
+  styleUrls: ['./home-top.component.scss']
 })
-export class LandingPageComponent implements OnInit {
+export class HomeTopComponent implements OnInit {
 
   text: string;
   line: string;
@@ -30,7 +30,7 @@ export class LandingPageComponent implements OnInit {
 
     setTimeout(() => this.animateText(), 1000);
 
-    setTimeout(()=>this.scrollToElement('#bottom-container'), 7000);
+    setTimeout(() => this.scrollToElement('#home-bottom-container'), 7000);
   }
 
   animateLine(): void {

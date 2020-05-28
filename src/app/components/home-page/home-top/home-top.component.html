@@ -1,0 +1,16 @@
+<div id="home-top-container">
+  <div></div>
+  <div id="presentation-container">
+    <div id="name-container">
+      {{displayedText}}{{displayedLine}}
+    </div>
+    <div id="description-container">
+      <div>Software Engineering</div>
+      <div id="description-divider">@</div>
+      <div>Polytechnique Montréal</div>
+    </div>
+  </div>
+  <button mat-icon-button id="down-button" class="neumorphic-light" (click)="scrollToElement('#home-bottom-container')">
+    <mat-icon>expand_more</mat-icon>
+  </button>
+</div>

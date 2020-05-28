@@ -20,3 +20,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-family: lato-black-italic;
   src: url(assets/font/Lato-BlackItalic.ttf) format("truetype");
 }
+
+.neumorphic-dark {
+  box-shadow: -4px -4px 12px rgba(255, 255, 255, 0.05), 6px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.neumorphic-light {
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.8), 6px 6px 12px rgba(185, 188, 193, 0.5);
+}
