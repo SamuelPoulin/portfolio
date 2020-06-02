@@ -1,0 +1,11 @@
+<div id="technologies-container">
+  <div id="technologies-first-container">
+    <div id="technologies-first-top-container">
+      <div id="technologies-title" class="section-title">#technologies</div>
+      <div id="technologies-line"></div>
+    </div>
+  </div>
+  <div id="technologies-second-container">
+    <app-home-technology *ngFor="let technology of technologies" [technology]="technology"></app-home-technology>
+  </div>
+</div>

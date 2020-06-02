@@ -1,0 +1,40 @@
+@import 'src/variables';
+
+#technology-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 210px;
+  height: 210px;
+  border-radius: 25%;
+}
+
+#technology-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  background-color: $dark-secondary-background;
+}
+
+#technology-image {
+  height: 100px;  
+}
+
+#technology-name {
+  color: $light-background;
+  font-family: 'lato';
+  font-size: 32px;
+}
+
+#technology-level {
+  color: $light-background;
+  font-family: 'lato';
+  font-size: 18px;
+  text-transform: uppercase;
+}

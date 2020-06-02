@@ -13,6 +13,8 @@ import { HomeBottomComponent } from './components/home-page/home-bottom/home-bot
 import { HomeAboutComponent } from './components/home-page/home-bottom/home-about/home-about.component';
 import { HomeExperienceComponent } from './components/home-page/home-bottom/home-experience/home-experience.component';
 import { HomeContactComponent } from './components/home-page/home-bottom/home-contact/home-contact.component';
+import { HomeTechnologiesComponent } from './components/home-page/home-bottom/home-technologies/home-technologies.component';
+import { HomeTechnologyComponent } from './components/home-page/home-bottom/home-technologies/home-technology/home-technology.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HomeContactComponent } from './components/home-page/home-bottom/home-co
     HomeBottomComponent,
     HomeAboutComponent,
     HomeExperienceComponent,
-    HomeContactComponent
+    HomeContactComponent,
+    HomeTechnologiesComponent,
+    HomeTechnologyComponent
   ],
   imports: [
     BrowserModule,
