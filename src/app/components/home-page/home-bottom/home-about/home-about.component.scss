@@ -49,8 +49,8 @@
 }
 
 #personal-picture {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   margin: 50px;
 
   border: 5px solid $dark-accent;
@@ -58,6 +58,11 @@
 
   object-fit: cover;
   object-position: 50% 10%;
+}
+
+.social-icon {
+  margin: 25px;
+  height: 35px
 }
 
 @media only screen and (max-width: 1000px) {
