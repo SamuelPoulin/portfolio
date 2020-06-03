@@ -15,6 +15,7 @@
 
   width: 100vw;
   min-height: calc(100vh - calc(100vh - 100%));
+  padding: 25px 0px;
 
   background-color: $dark-background;
 }
@@ -25,9 +26,31 @@
   width: 70%;
 }
 
+footer {
+  display: flex;
+  height: 65px;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 25px;
+
+  color: $dark-accent;
+  background-color: $dark-secondary-background;
+
+  font-family: 'lato-black-italic';
+  font-size: 24px;
+  
+  a {
+    color: $dark-accent;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .home-bottom-section {
     width: 95%;
     margin-top: 25px;
+  }
+
+  footer {
+    font-size: 16px;
   }
 }

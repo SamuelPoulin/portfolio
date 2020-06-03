@@ -1,0 +1,60 @@
+@import 'src/variables.scss';
+
+#contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#contact-first-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; 
+}
+
+#contact-second-container {
+  display: flex;
+  margin: 25px 0px;
+  color: $light-background;
+  font-family: 'lato';
+  font-size: 24px;
+
+  a {
+    color: $light-background;
+  }
+}
+
+#contact-title {
+  color: $dark-section-title;
+  font-size: 32px;
+  font-family: 'lato-black-italic';
+}
+
+#contact-line {
+  width: 388px;
+  margin: 5px 0px;
+  border: 5px solid $dark-accent;
+}
+
+@media only screen and (max-width: 1000px) {
+  #contact-container {
+    flex-direction: column;
+  }
+
+  #contact-first-container {
+    justify-content: normal;
+    flex-basis: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #contact-line {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #contact-title {
+    font-size: 24px;
+  }
+}

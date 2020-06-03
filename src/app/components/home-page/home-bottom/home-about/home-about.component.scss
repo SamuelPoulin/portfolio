@@ -30,12 +30,22 @@
   border: 5px solid $dark-accent;
 }
 
-#about-description {
+#about-description, #about-contact {
   font-size: 24px;
   font-family: 'lato';
   text-align: justify;
 
   color: $dark-text;
+  
+  a {
+    color: $light-background;
+  }
+}
+
+#about-contact {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px
 }
 
 #personal-picture {
@@ -60,8 +70,12 @@
     flex-basis: 0;
   }
   
-  #about-description {
-    margin: 25px 0px;
+  #about-contact {
+    margin-bottom: 25px;
+
+    p {
+      margin: 0;
+    }
   }
 }
 
@@ -70,7 +84,7 @@
     width: 90%;
   }
 
-  #about-description {
+  #about-description, #about-contact {
     font-size: 20px;
   }
 }
@@ -86,7 +100,7 @@
     font-size: 24px;
   }
 
-  #about-description {
+  #about-description, #about-contact {
     font-size: 16px;
   }
 }
