@@ -44,8 +44,10 @@
 
 #about-contact {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   flex-direction: row;
-  margin-top: 25px
+  margin-top: 25px;
 }
 
 #personal-picture {
@@ -80,7 +82,7 @@ a:focus {
   }
   
   #about-contact {
-    margin-bottom: 25px;
+    justify-content: center;
 
     p {
       margin: 0;
