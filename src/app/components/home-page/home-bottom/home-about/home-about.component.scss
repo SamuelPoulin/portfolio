@@ -62,7 +62,11 @@
 
 .social-icon {
   margin: 25px;
-  height: 35px
+  height: 35px;
+}
+
+a:focus {
+  outline: none;
 }
 
 @media only screen and (max-width: 1000px) {
