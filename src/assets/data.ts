@@ -1,4 +1,4 @@
-{
+const data = {
   "technologies": [
     {
       "name": "Angular",
@@ -64,3 +64,5 @@
     }
   ]
 }
+
+export default data;

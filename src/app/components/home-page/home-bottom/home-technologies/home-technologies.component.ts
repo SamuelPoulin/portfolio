@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { HomeTechnologyComponent } from './home-technology/home-technology.component';
-import * as data from 'src/assets/data.json';
+import data from 'src/assets/data';
 import { Technology } from 'src/app/models/technology';
 import { Level } from 'src/app/models/level';
 

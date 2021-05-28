@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Technology } from 'src/app/models/technology';
-import * as data from 'src/assets/data.json';
+import data from 'src/assets/data';
 import { Level } from 'src/app/models/level';
 
 @Component({
