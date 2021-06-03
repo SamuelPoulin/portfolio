@@ -1,68 +1,78 @@
 const data = {
-  "technologies": [
+  technologies: [
     {
-      "name": "Angular",
-      "picture": "angular.png",
-      "percent": 90
+      name: 'GraphQL',
+      picture: 'graphql.svg',
+      percent: 70,
     },
     {
-      "name": "Node.js",
-      "picture": "nodejs.png",
-      "percent": 95
+      name: 'React',
+      picture: 'react.svg',
+      percent: 95,
     },
     {
-      "name": "SQL",
-      "picture": "sql.png",
-      "percent": 90
+      name: 'Angular',
+      picture: 'angular.png',
+      percent: 90,
     },
     {
-      "name": "C++",
-      "picture": "cpp.png",
-      "percent": 80
+      name: 'Node.js',
+      picture: 'nodejs.png',
+      percent: 95,
     },
     {
-      "name": "C#",
-      "picture": "csharp.png",
-      "percent": 85
+      name: 'SQL',
+      picture: 'sql.png',
+      percent: 90,
     },
     {
-      "name": "Flutter",
-      "picture": "flutter.png",
-      "percent": 75
+      name: 'C++',
+      picture: 'cpp.png',
+      percent: 80,
     },
     {
-      "name": "Java",
-      "picture": "java.png",
-      "percent": 80
+      name: 'C#',
+      picture: 'csharp.png',
+      percent: 85,
     },
     {
-      "name": "Docker",
-      "picture": "docker.png",
-      "percent": 70
+      name: 'Flutter',
+      picture: 'flutter.png',
+      percent: 75,
     },
     {
-      "name": "Git",
-      "picture": "git.png",
-      "percent": 90
-    }
+      name: 'Java',
+      picture: 'java.png',
+      percent: 80,
+    },
+    {
+      name: 'Docker',
+      picture: 'docker.png',
+      percent: 80,
+    },
+    {
+      name: 'Git',
+      picture: 'git.png',
+      percent: 90,
+    },
   ],
-  "levels": [
+  levels: [
     {
-      "name": "Adequate",
-      "min": 50,
-      "max": 64
+      name: 'Adequate',
+      min: 50,
+      max: 64,
     },
     {
-      "name": "Intermediate",
-      "min": 65,
-      "max": 84
+      name: 'Intermediate',
+      min: 65,
+      max: 84,
     },
     {
-      "name": "Proficient",
-      "min": 85,
-      "max": 100
-    }
-  ]
-}
+      name: 'Proficient',
+      min: 85,
+      max: 100,
+    },
+  ],
+};
 
 export default data;
