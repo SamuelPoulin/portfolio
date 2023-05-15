@@ -6,8 +6,8 @@ const data = {
       percent: 70,
     },
     {
-      name: 'React',
-      picture: 'react.svg',
+      name: 'Next.js',
+      picture: 'nextjs.png',
       percent: 95,
     },
     {
@@ -28,6 +28,11 @@ const data = {
     {
       name: 'C++',
       picture: 'cpp.png',
+      percent: 80,
+    },
+    {
+      name: 'Python',
+      picture: 'python.png',
       percent: 80,
     },
     {
