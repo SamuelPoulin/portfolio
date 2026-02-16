@@ -1,11 +1,11 @@
 <template>
-    <div class="flex">
+    <div class="flex flex-col">
         <div
-            class="flex flex-col pt-[100px] gap-[175px] max-2xl:pt-[50px] max-2xl:gap-[200px] max-lg:pt-[25px] max-lg:gap-[225px] max-md:pt-[15px] max-md:gap-[350px] max-sm:pt-0 max-sm:gap-[350px]"
+            class="flex flex-row min-h-[575px] max-md:min-h-[450px] max-md:flex-col"
         >
-            <div>
+            <div class="flex flex-1 flex-col">
                 <h1
-                    class="m-0 whitespace-nowrap select-none font-bold text-[112px] leading-[128px] max-2xl:text-[84px] max-2xl:leading-[96px] max-lg:text-[56px] max-lg:leading-[64px] max-md:text-[46px] max-md:leading-[52px] max-sm:text-[35px] max-sm:leading-[40px]"
+                    class="pt-[100px] max-2xl:pt-[50px] max-lg:pt-[25px] max-md:pt-[15px] max-sm:pt-0 m-0 whitespace-nowrap select-none font-bold text-[112px] leading-[128px] max-2xl:text-[84px] max-2xl:leading-[96px] max-lg:text-[56px] max-lg:leading-[64px] max-md:text-[46px] max-md:leading-[52px] max-sm:text-[35px] max-sm:leading-[40px]"
                 >
                     SAMUEL POULIN
                 </h1>
@@ -37,33 +37,33 @@
                     </div>
                 </div>
             </div>
-            <div class="flex gap-[25px]">
-                <a
-                    v-if="result?.AboutMe?.resume"
-                    class="text-black font-medium text-[20px]"
-                    :href="result?.AboutMe?.resume?.url"
-                    target="_blank"
-                    >Resume</a
-                >
-                <NuxtLink
-                    class="text-black font-medium text-[20px]"
-                    href="https://linkedin.com/in/samuel-poulin"
-                    target="_blank"
-                    >LinkedIn</NuxtLink
-                >
-                <NuxtLink
-                    class="text-black font-medium text-[20px]"
-                    href="https://github.com/samuelpoulin"
-                    target="_blank"
-                    >Github</NuxtLink
-                >
+            <div
+                v-if="showBagel"
+                class="flex flex-1 min-w-0 min-h-0 items-center justify-center"
+            >
+                <BagelScene />
             </div>
         </div>
-        <div
-            v-if="showBagel"
-            class="flex items-center justify-center w-full max-xl:hidden"
-        >
-            <BagelCanvas />
+        <div class="flex gap-[25px]">
+            <NuxtLink
+                v-if="result?.AboutMe?.resume"
+                class="text-black font-medium text-[20px] underline"
+                :href="result?.AboutMe?.resume?.url"
+                target="_blank"
+                >Resume</NuxtLink
+            >
+            <NuxtLink
+                class="text-black font-medium text-[20px] underline"
+                href="https://linkedin.com/in/samuel-poulin"
+                target="_blank"
+                >LinkedIn</NuxtLink
+            >
+            <NuxtLink
+                class="text-black font-medium text-[20px] underline"
+                href="https://github.com/samuelpoulin"
+                target="_blank"
+                >Github</NuxtLink
+            >
         </div>
     </div>
 </template>

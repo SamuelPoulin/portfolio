@@ -59,7 +59,7 @@
     display: flex;
     flex-direction: column;
 
-    padding-top: 175px;
+    padding-top: 100x;
     gap: 10px;
 }
 

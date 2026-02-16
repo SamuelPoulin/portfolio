@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
     "@nuxt/icon",
+    "@tresjs/nuxt",
   ],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
