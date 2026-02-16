@@ -12,7 +12,7 @@
                 <h2
                     class="m-0 select-none font-medium text-[40px] leading-[34px] max-2xl:text-[30px] max-lg:text-[30px] max-md:text-[24px] max-md:leading-[28px] max-sm:text-[20px] max-sm:leading-[23px]"
                 >
-                    {{ result?.LandingPageDescription.description }}
+                    {{ data?.LandingPageDescription?.description }}
                 </h2>
                 <div
                     class="flex gap-[10px] max-2xl:gap-[5px] max-lg:gap-[5px] max-md:gap-[3px]"
@@ -46,9 +46,9 @@
         </div>
         <div class="flex gap-[25px]">
             <NuxtLink
-                v-if="result?.AboutMe?.resume"
+                v-if="data?.AboutMe?.resume?.url"
                 class="text-black font-medium text-[20px] underline"
-                :href="result?.AboutMe?.resume?.url"
+                :href="data?.AboutMe?.resume?.url"
                 target="_blank"
                 >Resume</NuxtLink
             >
@@ -69,7 +69,9 @@
 </template>
 
 <script setup lang="ts">
-const { result } = defineProps(["result"]);
+const { data } = await useAsyncGql({
+    operation: "landingPage",
+});
 
 const showBagel = ref(false);
 </script>

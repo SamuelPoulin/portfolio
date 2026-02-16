@@ -1,0 +1,17 @@
+query projects {
+    Projects(sort: "rank") {
+        docs {
+            name
+            description
+            picture {
+                url
+                alt
+            }
+            githubUrl
+            url
+            skills {
+                name
+            }
+        }
+    }
+}

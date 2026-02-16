@@ -20,7 +20,8 @@
     "nuxt-graphql-client": "0.2.46",
     "three": "^0.182.0",
     "vue": "^3.5.28",
-    "vue-router": "^4.6.4"
+    "vue-router": "^4.6.4",
+    "vue3-marquee": "^4.2.2"
   },
   "devDependencies": {
     "@types/three": "^0.182.0"

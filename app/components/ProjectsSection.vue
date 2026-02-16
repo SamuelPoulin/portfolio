@@ -1,6 +1,6 @@
 <template>
     <div
-        v-if="result?.Projects"
+        v-if="data?.Projects"
         class="flex flex-col gap-2.5 pt-[30px] md:pt-0 2xl:pt-[80px]"
     >
         <a id="projects" />
@@ -8,9 +8,10 @@
         <div class="flex gap-[50px] pb-[25px] overflow-x-scroll">
             <div
                 class="flex flex-col gap-2.5 min-w-[300px] w-[300px]"
-                v-for="project of result?.Projects?.docs"
+                v-for="project of data?.Projects?.docs"
             >
                 <NuxtImg
+                    v-if="project?.picture?.url"
                     class="w-[300px] rounded-[10px]"
                     :src="project.picture.url"
                     :alt="project.picture.alt"
@@ -27,9 +28,9 @@
                         <span>Built with </span>
                         <span>
                             {{
-                                project.skills
-                                    .map((skill: any) => skill.name)
-                                    .join(", ")
+                                project?.skills
+                                    ?.map((skill: any) => skill.name)
+                                    ?.join(", ")
                             }}.
                         </span>
                     </div>
@@ -56,5 +57,7 @@
 </template>
 
 <script setup lang="ts">
-const { result } = defineProps(["result"]);
+const { data } = await useAsyncGql({
+    operation: "projects",
+});
 </script>

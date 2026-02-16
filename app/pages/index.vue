@@ -1,8 +1,8 @@
 <template>
-    <LandingSection :result="result" />
-    <ProjectsSection :result="result" />
-    <AboutSection :result="result" />
-    <SkillsSection :result="result" />
+    <LandingSection />
+    <ProjectsSection />
+    <AboutSection />
+    <SkillsSection />
 </template>
 
 <script lang="ts" setup>
@@ -17,9 +17,5 @@ useHead({
     htmlAttrs: {
         lang: "en",
     },
-});
-
-const { data: result } = await useAsyncGql({
-    operation: "landingPage",
 });
 </script>

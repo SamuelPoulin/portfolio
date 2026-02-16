@@ -1,0 +1,10 @@
+query aboutMe {
+    AboutMe {
+        picture {
+            url
+            alt
+        }
+        opener
+        description
+    }
+}
