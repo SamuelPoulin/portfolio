@@ -7,7 +7,11 @@ export default defineNuxtConfig({
     "nuxt-graphql-client",
     "@nuxt/image",
     "@nuxt/fonts",
+    "@nuxt/icon",
   ],
+  tailwindcss: {
+    cssPath: "~/assets/css/tailwind.css",
+  },
   fonts: {
     families: [{ name: "Inter", provider: "google" }],
     defaults: {

@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .animate-pulse-custom {
+        animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(1.2);
+        }
+        50% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.2);
+        }
+    }
+}
