@@ -4,9 +4,7 @@
         class="flex flex-col py-[100px] gap-[10px] max-lg:py-[50px] max-md:py-[25px]"
     >
         <a id="skills" />
-        <div class="section-title-container">
-            <h2 class="section-title"># things I picked up along the way</h2>
-        </div>
+        <SectionTitle># things I picked up along the way</SectionTitle>
         <div class="flex flex-wrap gap-[10px]">
             <div
                 class="flex flex-col gap-[10px] p-[25px] rounded-[10px] bg-[#ececec] max-lg:p-[15px] max-md:items-center max-md:flex-grow"

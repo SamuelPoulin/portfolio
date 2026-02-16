@@ -1,9 +1,7 @@
 <template>
     <div class="flex flex-col pt-[100px] gap-[10px]">
         <a id="about" />
-        <div class="section-title-container">
-            <h2 class="section-title"># about me</h2>
-        </div>
+        <SectionTitle> # about me </SectionTitle>
         <div
             class="flex gap-[150px] pr-[150px] max-lg:flex-col max-lg:gap-[50px] max-lg:pr-0 max-md:gap-[25px]"
         >

@@ -4,9 +4,7 @@
         class="flex flex-col gap-2.5 pt-[30px] md:pt-0 2xl:pt-[80px]"
     >
         <a id="projects" />
-        <div class="section-title-container">
-            <h2 class="section-title"># previous work</h2>
-        </div>
+        <SectionTitle># previous work</SectionTitle>
         <div class="flex gap-[50px] pb-[25px] overflow-x-scroll">
             <div
                 class="flex flex-col gap-2.5 min-w-[300px] w-[300px]"

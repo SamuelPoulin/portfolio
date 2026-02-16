@@ -1,5 +1,5 @@
 <template>
-    <div id="page-container">
+    <div class="flex flex-col px-[15px] sm:px-[50px]">
         <header>
             <slot name="header">
                 <Header />
@@ -17,25 +17,11 @@
 </template>
 
 <style>
-#page-container {
-    display: flex;
-    flex-direction: column;
-
-    padding: 0px 50px;
-}
-
 html,
 body {
     max-width: 100%;
     overflow-x: hidden;
 
     background-color: #ffffff;
-}
-
-/* sm */
-@media only screen and (max-width: 640px) {
-    #page-container {
-        padding: 0px 15px;
-    }
 }
 </style>
