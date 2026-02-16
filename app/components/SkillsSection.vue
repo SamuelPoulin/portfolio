@@ -11,7 +11,7 @@
                 :key="skill.name"
             >
                 <div class="skill-informations">
-                    <nuxt-img
+                    <NuxtImg
                         class="skill-logo"
                         :src="skill.logo.url"
                         :alt="skill.logo.alt"

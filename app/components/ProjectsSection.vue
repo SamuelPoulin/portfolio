@@ -12,7 +12,7 @@
                 class="flex flex-col gap-2.5 min-w-[300px] w-[300px]"
                 v-for="project of result?.Projects?.docs"
             >
-                <nuxt-img
+                <NuxtImg
                     class="w-[300px] rounded-[10px]"
                     :src="project.picture.url"
                     :alt="project.picture.alt"
@@ -22,10 +22,10 @@
                     <h3 class="m-0 font-medium text-[32px]">
                         {{ project.name }}
                     </h3>
-                    <div class="font-normal text-[20px]/5">
+                    <div class="font-normal text-[20px] leading-[24px]">
                         {{ project.description }}
                     </div>
-                    <div class="font-normal text-[20px]/5">
+                    <div class="font-normal text-[20px] leading-[24px]">
                         <span>Built with </span>
                         <span>
                             {{
