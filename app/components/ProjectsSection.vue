@@ -1,28 +1,31 @@
 <template>
-    <div id="projects-container" v-if="result?.Projects">
+    <div
+        v-if="result?.Projects"
+        class="flex flex-col gap-2.5 pt-[30px] md:pt-0 2xl:pt-[80px]"
+    >
         <a id="projects" />
         <div class="section-title-container">
             <h2 class="section-title"># previous work</h2>
         </div>
-        <div id="projects-list">
+        <div class="flex gap-[50px] pb-[25px] overflow-x-scroll">
             <div
-                class="project-container"
+                class="flex flex-col gap-2.5 min-w-[300px] w-[300px]"
                 v-for="project of result?.Projects?.docs"
             >
                 <nuxt-img
-                    class="project-picture"
+                    class="w-[300px] rounded-[10px]"
                     :src="project.picture.url"
                     :alt="project.picture.alt"
                     format="webp"
                 />
-                <div class="project-informations">
-                    <h3 class="project-name">
+                <div class="flex flex-col gap-[15px] h-[250px]">
+                    <h3 class="m-0 font-medium text-[32px]">
                         {{ project.name }}
                     </h3>
-                    <div class="project-description">
+                    <div class="font-normal text-[20px]/5">
                         {{ project.description }}
                     </div>
-                    <div class="project-description">
+                    <div class="font-normal text-[20px]/5">
                         <span>Built with </span>
                         <span>
                             {{
@@ -33,117 +36,26 @@
                         </span>
                     </div>
                 </div>
-                <div class="project-links">
-                    <nuxt-link
-                        class="project-link"
+                <div class="flex gap-5 text-[20px]">
+                    <NuxtLink
+                        class="underline"
                         v-if="project.url"
                         :href="project.url"
                         target="_blank"
-                        >Visit</nuxt-link
+                        >Visit</NuxtLink
                     >
-                    <nuxt-link
-                        class="project-link"
+                    <NuxtLink
+                        class="underline"
                         v-if="project.githubUrl"
                         :href="project.githubUrl"
                         target="_blank"
-                        >GitHub</nuxt-link
+                        >GitHub</NuxtLink
                     >
                 </div>
             </div>
         </div>
     </div>
 </template>
-
-<style scoped>
-#projects-container {
-    display: flex;
-    flex-direction: column;
-
-    padding-top: 100x;
-    gap: 10px;
-}
-
-#projects-list {
-    display: flex;
-
-    gap: 50px;
-    padding-bottom: 25px;
-
-    overflow-x: scroll;
-}
-
-.project-container {
-    display: flex;
-    flex-direction: column;
-
-    gap: 10px;
-    width: 300px;
-}
-
-.project-informations {
-    display: flex;
-    flex-direction: column;
-
-    gap: 15px;
-    height: 250px;
-}
-
-.project-links {
-    display: flex;
-
-    gap: 20px;
-}
-
-.project-link {
-    color: #000000;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.project-picture {
-    border-radius: 10px;
-
-    width: 300px;
-}
-
-.project-name {
-    margin: 0;
-
-    font-weight: 500;
-    font-size: 32px;
-}
-
-.project-description {
-    font-weight: 400;
-    font-size: 20px;
-}
-
-/* lg */
-@media only screen and (max-width: 1024px) {
-    #projects-list {
-        flex-direction: column;
-        overflow-x: auto;
-    }
-
-    .project-container {
-        width: unset;
-    }
-}
-
-/* md */
-@media only screen and (max-width: 768px) {
-    #projects-container {
-        padding-top: 25px;
-    }
-}
-
-/* sm */
-@media only screen and (max-width: 640px) {
-    #projects-container {
-        padding-top: 25px;
-    }
-}
-</style>
 
 <script setup lang="ts">
 const { result } = defineProps(["result"]);
