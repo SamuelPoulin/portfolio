@@ -1,254 +1,72 @@
 <template>
-    <div id="landing-container">
-        <div id="landing-infos-container">
-            <div id="landing-intro">
-                <h1 id="landing-name">SAMUEL POULIN</h1>
-                <h2 class="landing-description">
+    <div class="flex">
+        <div
+            class="flex flex-col pt-[100px] gap-[175px] max-2xl:pt-[50px] max-2xl:gap-[200px] max-lg:pt-[25px] max-lg:gap-[225px] max-md:pt-[15px] max-md:gap-[350px] max-sm:pt-0 max-sm:gap-[350px]"
+        >
+            <div>
+                <h1
+                    class="m-0 whitespace-nowrap select-none font-bold text-[112px] leading-[128px] max-2xl:text-[84px] max-2xl:leading-[96px] max-lg:text-[56px] max-lg:leading-[64px] max-md:text-[46px] max-md:leading-[52px] max-sm:text-[35px] max-sm:leading-[40px]"
+                >
+                    SAMUEL POULIN
+                </h1>
+                <h2
+                    class="m-0 select-none font-medium text-[40px] leading-[34px] max-2xl:text-[30px] max-lg:text-[30px] max-md:text-[24px] max-md:leading-[28px] max-sm:text-[20px] max-sm:leading-[23px]"
+                >
                     {{ result?.LandingPageDescription.description }}
                 </h2>
-                <div id="landing-city-container">
-                    <h2 class="landing-description">based in</h2>
-                    <div id="landing-city">
+                <div
+                    class="flex gap-[10px] max-2xl:gap-[5px] max-lg:gap-[5px] max-md:gap-[3px]"
+                >
+                    <h2
+                        class="m-0 select-none font-medium text-[40px] max-2xl:text-[30px] max-2xl:leading-[34px] max-lg:text-[30px] max-md:text-[24px] max-md:leading-[28px] max-sm:text-[20px] max-sm:leading-[23px]"
+                    >
+                        based in
+                    </h2>
+                    <div
+                        class="flex items-center gap-[10px] max-2xl:gap-[5px] max-lg:gap-[5px] max-md:gap-[3px]"
+                    >
                         <button
-                            id="landing-button"
-                            v-on:click="showBagel = !showBagel"
+                            class="border-none bg-transparent underline font-medium tracking-tighter text-[40px] leading-[46px] cursor-pointer max-2xl:text-[30px] max-2xl:leading-[34px] max-lg:text-[30px] max-md:text-[24px] max-md:leading-[28px] max-sm:text-[20px] max-sm:leading-[23px]"
+                            @click="showBagel = !showBagel"
                         >
                             {{ showBagel ? "the city of bagels" : "Montréal" }}
                         </button>
-                        <MontrealLogo id="landing-city-logo" />
+                        <MontrealLogo
+                            class="max-2xl:w-[30px] max-2xl:h-[30px] max-lg:w-[20px] max-lg:h-[20px] max-md:w-[20px] max-md:h-[20px] max-sm:w-[20px] max-sm:h-[20px]"
+                        />
                     </div>
                 </div>
             </div>
-            <div id="landing-links">
+            <div class="flex gap-[25px]">
                 <a
                     v-if="result?.AboutMe?.resume"
-                    class="landing-link"
+                    class="text-black font-medium text-[20px]"
                     :href="result?.AboutMe?.resume?.url"
                     target="_blank"
                     >Resume</a
                 >
-                <nuxt-link
-                    class="landing-link"
+                <NuxtLink
+                    class="text-black font-medium text-[20px]"
                     href="https://linkedin.com/in/samuel-poulin"
                     target="_blank"
-                    >LinkedIn</nuxt-link
+                    >LinkedIn</NuxtLink
                 >
-                <nuxt-link
-                    class="landing-link"
+                <NuxtLink
+                    class="text-black font-medium text-[20px]"
                     href="https://github.com/samuelpoulin"
                     target="_blank"
-                    >Github</nuxt-link
+                    >Github</NuxtLink
                 >
             </div>
         </div>
-        <div id="landing-bagel-container" v-if="showBagel">
+        <div
+            v-if="showBagel"
+            class="flex items-center justify-center w-full max-xl:hidden"
+        >
             <BagelCanvas />
         </div>
     </div>
 </template>
-
-<style scoped>
-#landing-container {
-    display: flex;
-}
-
-#landing-infos-container {
-    display: flex;
-    flex-direction: column;
-
-    padding: 100px 0px 0px;
-    gap: 175px;
-}
-
-#landing-name {
-    margin: 0;
-
-    white-space: nowrap;
-    user-select: none;
-    font-weight: 700;
-    font-size: 112px;
-}
-
-.landing-description {
-    margin: 0;
-
-    user-select: none;
-    font-weight: 500;
-    font-size: 40px;
-}
-
-#landing-city-container {
-    display: flex;
-
-    gap: 10px;
-}
-
-#landing-city {
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-}
-
-#landing-button {
-    border: none;
-    background: none;
-    text-decoration-line: underline;
-    font-weight: 500;
-    font-size: 40px;
-    cursor: pointer;
-}
-
-#landing-links {
-    display: flex;
-
-    gap: 25px;
-}
-
-.landing-link {
-    color: #000000;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-#landing-bagel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-}
-
-/* 2xl */
-@media only screen and (max-width: 1536px) {
-    #landing-infos-container {
-        padding-top: 50px;
-
-        gap: 200px;
-    }
-
-    #landing-city-container {
-        gap: 5px;
-    }
-
-    #landing-name {
-        font-size: 84px;
-    }
-
-    .landing-description,
-    #landing-button {
-        font-size: 30px;
-    }
-
-    #landing-city {
-        gap: 5px;
-    }
-
-    #landing-city-logo {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-@media only screen and (max-width: 1280px) {
-    #landing-bagel-container {
-        display: none;
-    }
-}
-
-/* lg */
-@media only screen and (max-width: 1024px) {
-    #landing-infos-container {
-        padding-top: 25px;
-
-        gap: 225px;
-    }
-
-    #landing-city-container {
-        gap: 5px;
-    }
-
-    #landing-name {
-        font-size: 56px;
-    }
-
-    .landing-description,
-    #landing-button {
-        font-size: 30px;
-    }
-
-    #landing-city {
-        gap: 5px;
-    }
-
-    #landing-city-logo {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-/* md */
-@media only screen and (max-width: 768px) {
-    #landing-infos-container {
-        padding-top: 15px;
-
-        gap: 350px;
-    }
-
-    #landing-city-container {
-        gap: 3px;
-    }
-
-    #landing-name {
-        font-size: 46px;
-    }
-
-    .landing-description,
-    #landing-button {
-        font-size: 24px;
-    }
-
-    #landing-city {
-        gap: 3px;
-    }
-
-    #landing-city-logo {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-/* sm */
-@media only screen and (max-width: 640px) {
-    #landing-infos-container {
-        padding-top: 0px;
-
-        gap: 350px;
-    }
-
-    #landing-city-container {
-        gap: 0px;
-    }
-
-    #landing-name {
-        font-size: 35px;
-    }
-
-    .landing-description,
-    #landing-button {
-        font-size: 20px;
-    }
-
-    #landing-city {
-        gap: 0px;
-    }
-
-    #landing-city-logo {
-        width: 20px;
-        height: 20px;
-    }
-}
-</style>
 
 <script setup lang="ts">
 const { result } = defineProps(["result"]);
