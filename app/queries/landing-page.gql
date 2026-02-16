@@ -1,0 +1,41 @@
+query landingPage {
+    LandingPageDescription {
+        description
+    }
+    Projects(sort: "rank") {
+        docs {
+            name
+            description
+            picture {
+                url
+                alt
+            }
+            githubUrl
+            url
+            skills {
+                name
+            }
+        }
+    }
+    AboutMe {
+        picture {
+            url
+            alt
+        }
+        opener
+        description
+        resume {
+            url
+        }
+    }
+    Skills(limit: 100, where: { showcase: { equals: true } }) {
+        docs {
+            name
+            experience
+            logo {
+                url
+                alt
+            }
+        }
+    }
+}

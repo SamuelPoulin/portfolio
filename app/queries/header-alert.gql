@@ -1,0 +1,7 @@
+query headerAlert {
+    HeaderAlert {
+        emojiLeft
+        alert
+        emojiRight
+    }
+}
